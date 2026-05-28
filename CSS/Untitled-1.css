@@ -1,0 +1,246 @@
+/* ================================
+   CSS VARIABLES
+================================ */
+
+:root{
+
+    /* Main colours */
+    --primary-green: #106554;
+    --secondary-green: #1D9E75;
+    --light-green: #9FE1CB;
+
+    /* Background colours */
+    --body-background: #f4f4f4;
+    --box-background: rgba(0,0,0,0.08);
+    --banner-background: #0f6e56ca;
+
+    /* Text colours */
+    --white: white;
+    --dark-text: #333;
+
+    /* Font styles */
+    --main-font: Arial, sans-serif;
+    --paragraph-font: 'Times New Roman', Times, serif;
+    --heading-font: 'Cinzel', serif;
+
+    /* Common spacing */
+    --main-padding: 20px;
+    --section-spacing: 40px;
+
+    /* Border radius */
+    --radius: 8px;
+
+    /* Transition effect */
+    --transition: 0.3s;
+}
+
+/* ================================
+   RESET DEFAULT STYLES
+================================ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================
+   BODY STYLING
+================================ */
+
+body{
+    font-family: var(--main-font);
+    background-color: var(--body-background);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* ================================
+   HEADER SECTION
+================================ */
+
+.top-banner{
+    background-color: var(--banner-background);
+    padding: var(--main-padding) var(--section-spacing);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo image */
+.logo{
+    width: 70px;
+    height: 80px;
+}
+
+/* Banner text alignment */
+.banner-text{
+    text-align: center;
+}
+
+/* Main heading */
+.banner-text h1{
+    color: var(--white);
+    font-family: var(--heading-font);
+    margin-bottom: 5px;
+}
+
+/* Subtitle */
+.banner-text p{
+    color: var(--light-green);
+    font-size: 14px;
+}
+
+/* ================================
+   NAVIGATION BAR
+================================ */
+
+nav{
+    background-color: var(--primary-green);
+    padding: 15px;
+    text-align: center;
+}
+
+/* Navigation links */
+nav a{
+    color: var(--white);
+    text-decoration: none;
+    padding: 0 15px;
+
+    border-right: 1px solid var(--secondary-green);
+
+    transition: var(--transition);
+}
+
+/* Remove last border */
+nav a:last-child{
+    border-right: none;
+}
+
+/* Hover effect */
+nav a:hover{
+    color: var(--light-green);
+}
+
+/* ================================
+   WELCOME SECTION
+================================ */
+
+.welcome-section{
+    text-align: center;
+    padding: var(--section-spacing) var(--main-padding);
+}
+
+/* Small heading */
+.welcome-section h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Main title */
+.welcome-section h1{
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* Decorative line */
+.line{
+    width: 180px;
+    height: 3px;
+
+    background-color: var(--secondary-green);
+
+    margin: 10px auto 20px;
+}
+
+/* Welcome content area */
+.welcome-content{
+    max-width: 700px;
+    margin: auto;
+
+    padding: var(--main-padding);
+
+    text-align: left;
+}
+
+/* Welcome paragraphs */
+.welcome-content p{
+    margin-bottom: 20px;
+
+    font-family: var(--paragraph-font);
+    font-size: 18px;
+}
+
+/* ================================
+   INFORMATION BOXES
+================================ */
+
+.info-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: var(--section-spacing) var(--main-padding);
+
+    margin-top: var(--section-spacing);
+
+    border-top: 2px solid var(--secondary-green);
+
+    flex-wrap: wrap;
+}
+
+/* Individual information boxes */
+.info-box{
+    flex: 1;
+    min-width: 250px;
+
+    text-align: center;
+
+    padding: var(--main-padding);
+
+    background-color: var(--box-background);
+
+    border-radius: var(--radius);
+}
+
+/* Box headings */
+.info-box h3{
+    color: var(--secondary-green);
+
+    border-bottom: 2px solid var(--secondary-green);
+
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* Box paragraph text */
+.info-box p{
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+/* FOOTER SECTION */
+
+footer{
+    background-color: var(--primary-green);
+    color: var(--white);
+
+    text-align: center;
+
+    padding: var(--main-padding);
+
+    margin-top: var(--section-spacing);
+}
+
+/* RESPONSIVE Adjustments */
+
+@media (max-width: 600px) {
+    label,
+    input[type="text"],
+    input[type=submit] {
+    select,textarea {
+        flex: 100%;
+        min-width: 100%;
+    }
+}
