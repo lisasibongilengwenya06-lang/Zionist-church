@@ -1,6 +1,5 @@
-
 :root {
-  /* Colors */
+  /* Page Colors */
   --bg-main: #3cbe90;
   --bg-banner: #0f6e56ca;
   --bg-nav-footer: #106554;
@@ -8,8 +7,9 @@
   --color-accent: #1D9E75;
   --color-text-light: #ffffff;
   --color-text-muted: #9FE1CB;
+  --color-text-dark: #333333;
   
-  /* Typography */
+  /* Typography rules */
   --font-heading: 'Cinzel', serif;
   --font-body: 'Times New Roman', Times, serif;
 
@@ -19,14 +19,14 @@
   --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-/* Base Body Styles */
 body {
   background-color: var(--bg-main);
   margin: 0;
   padding: 0;
+  color: var(--color-text-dark);
 }
 
-/* Header Banner Components */
+/* Header & Banner Layout */
 .top-banner {
   background-color: var(--bg-banner);
   padding: 20px 40px;
@@ -56,7 +56,7 @@ body {
   font-size: 14px;
 }
 
-/* Navigation Menu */
+/* Navigation Links */
 .nav-bar {
   background-color: var(--bg-nav-footer);
   padding: 10px 40px;
@@ -68,20 +68,23 @@ body {
   padding: 0 15px;
   text-decoration: none;
   border-right: 1px solid var(--color-accent);
+  display: inline-block;
 }
 
 .nav-link-last {
   color: var(--color-text-light);
   padding: 0 15px;
   text-decoration: none;
+  display: inline-block;
 }
 
-/* Devotion Information Card Containers */
+/* Main Content Devotion Cards */
 .devotion-card {
   background-color: var(--bg-card);
   border-radius: var(--border-radius-card);
   padding: 20px 30px;
-  margin-bottom: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
   border-left: 5px solid var(--color-accent);
   box-shadow: var(--shadow-card);
 }
@@ -96,15 +99,6 @@ body {
   flex: 1;
 }
 
-.devotion-card h2 {
-  margin-top: 0;
-}
-
-.devotion-card p {
-  text-align: left;
-  font-family: var(--font-body);
-}
-
 .image-container {
   flex: 1;
   text-align: center;
@@ -117,7 +111,18 @@ body {
   border: 2px solid var(--color-accent);
 }
 
-/* Footer Element */
+/* Paragraph Text Styling inside cards */
+.devotion-card h2 {
+  margin-top: 0;
+}
+
+.devotion-card p {
+  text-align: left;
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+/* Footer layout */
 .main-footer {
   background-color: var(--bg-nav-footer);
   color: var(--color-text-light);
@@ -133,4 +138,3 @@ body {
         flex: 100%;
         min-width: 100%;
     }
-}
