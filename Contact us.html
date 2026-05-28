@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us</title>
+  <!-- Link to external style.css file -->
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <style>
-        body {
-    background-color: #e1f5ee;
-  }
-    </style>
-    <title>Contact us</title>
-     <header>
 
-  <!-- Top banner -->
-  <div style="background-color: #0f6e56ca; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between;">
-    <img src="images/Logo.png" style="width:70px; height:80px;">
-    <div style="text-align: center;">
-      <h1 style="color: white; margin: 0; font-family: 'Cinzel', serif;">Zionist Church</h1>
-      <p style="color: #9FE1CB; margin: 0; font-size: 14px;">Faith • Community • Service</p>
+  <header>
+    <!-- Top banner -->
+    <div class="top-banner">
+      <img src="images/Logo.png" alt="Logo" class="logo">
+      <div class="banner-text">
+        <h1 class="banner-title">Zionist Church</h1>
+        <p class="banner-subtitle">Faith • Community • Service</p>
+      </div>
+      <div></div>
     </div>
-    <div></div>
-  </div>
 
-  <!-- Navigation bar below banner -->
-  <nav style="background-color: #106554; padding: 10px 40px; text-align: center;">
-    <a href="home.html" style="color: white; padding: 0 15px; text-decoration: none; border-right: 1px solid #1D9E75;">Home</a>
-    <a href="About us.html" style="color: white; padding: 0 15px; text-decoration: none; border-right: 1px solid #1D9E75;">About us</a>
-    <a href="Directory.html" style="color: white; padding: 0 15px; text-decoration: none; border-right: 1px solid #1D9E75;">Directory</a>
-    <a href="Photo gallery.html" style="color: white; padding: 0 15px; text-decoration: none; border-right: 1px solid #1D9E75;">Photo Gallery</a>
-    <a href="Devotions.html" style="color: white; padding: 0 15px; text-decoration: none; border-right: 1px solid #1D9E75;">Devotions</a>
-    <a href="Contact us.html" style="color: white; padding: 0 15px; text-decoration: none;">Contact us</a>
-  </nav>
+    <!-- Navigation bar below banner -->
+    <nav class="nav-bar">
+      <a href="home.html" class="nav-link">Home</a>
+      <a href="About us.html" class="nav-link">About us</a>
+      <a href="Directory.html" class="nav-link">Directory</a>
+      <a href="Photo gallery.html" class="nav-link">Photo Gallery</a>
+      <a href="Devotions.html" class="nav-link">Devotions</a>
+      <a href="Contact us.html" class="nav-link-last">Contact us</a>
+    </nav>
   </header>
 
-  <h1 style="text-align: center;"><u>How to contact us</u></h1>
-  <div style="background-color: white; border-radius: 10px; padding: 20px 30px; margin-bottom: 20px;
-              border-left: 5px solid #1D9E75; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
-              <div style="display: flex; gap: 20px; align-items: center;">
-                <div style="flex: 1;">
-  <h2><u>Physical Address</u></h2>
-  <p style="font-family: Georgia, 'Times New Roman', Times, serif;"><a href="https://www.google.com/maps/place/Braamfontein+Centre,+23+Jorissen+St,+Braamfontein,+Johannesburg,+2017/@-26.1926949,28.0339324,17z/data=!3m1!4b1!4m6!3m5!1s0x1e950c1bb2ad5483:0xffc2ed86c651c235!8m2!
-    3d-26.1926949!4d28.0339324!16s%2Fg%2F11bw3y988c?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D">23 Jorissen Street​, Braamfontein</a>
-    <h2><u>Postal address</u></br></h2>
-        P.O. Box 142, Wits, 2050​</br></p>
-    <h2><u>Cell number</u></h2>
-    <p style="font-family: Georgia, 'Times New Roman', Times, serif;">+27 87 703 6461</p></br>
-    <h3><u>Would you like to share your Zion church's images and/or even? Send it through to:</u></h3>
-    <p style="font-family: Georgia, 'Times New Roman', Times, serif;">zionchurches@icloud.com</p>
-  <div style="flex: 1; text-align: center;">
-      <img src="images/location.png" 
-           alt="Location" 
-           style="width: 100%; max-width: 400px; border-radius: 8px; border: 2px solid #1D9E75;">
+  <main>
+    <h1 class="main-title"><u>How to contact us</u></h1>
+
+    <div class="contact-card">
+      <div class="card-flex">
+        
+        <!-- Left Column: Contact Details Text -->
+        <div class="text-container">
+          <h2><u>Physical Address</u></h2>
+          <p>
+            <a href="https://www.google.com/maps/place/Braamfontein+Centre,+23+Jorissen+St,+Braamfontein,+Johannesburg,+2017/@-26.1926949,28.0339324,17z/data=!3m1!4b1!4m6!3m5!1s0x1e950c1bb2ad5483:0xffc2ed86c651c235!8m2!3d-26.1926949!4d28.0339324!16s%2Fg%2F11bw3y988c?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+              23 Jorissen Street​, Braamfontein
+            </a>
+          </p>
+          
+          <h2><u>Postal address</u></h2>
+          <p>P.O. Box 142, Wits, 2050​</p>
+          
+          <h2><u>Cell number</u></h2>
+          <p>+27 87 703 6461</p>
+          
+          <h3><u>Would you like to share your Zion church's images and/or even? Send it through to:</u></h3>
+          <p>zionchurches@icloud.com</p>
+        </div>
+
+        <!-- Right Column: Location Imagery Box -->
+        <div class="image-container">
+          <img src="images/location.png" alt="Location Map Visual">
+        </div>
+
+      </div>
     </div>
-                </div>
-                 </div>
+  </main>
 
-</div>
-
-<footer style="background-color: #106554; color: white; text-align: center; padding: 20px; margin-top: 40px;">
-    <p>&copy; 2026 Zion Churches. All rights reserved. </br> ST10519253</p>
+  <footer class="main-footer">
+    <p>&copy; 2026 Zion Churches. All rights reserved. <br> ST10519253</p>
   </footer>
+
 </body>
 </html>
-  

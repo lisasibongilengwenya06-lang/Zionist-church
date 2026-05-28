@@ -1,7 +1,7 @@
 
 :root {
   /* Colors */
-  --bg-main: #3cbe90;
+  --bg-main: #e1f5ee;
   --bg-banner: #0f6e56ca;
   --bg-nav-footer: #106554;
   --bg-card: #ffffff;
@@ -11,7 +11,7 @@
   
   /* Typography */
   --font-heading: 'Cinzel', serif;
-  --font-body: 'Times New Roman', Times, serif;
+  --font-contact: Georgia, 'Times New Roman', Times, serif;
 
   /* Card Layout Properties */
   --border-radius-card: 10px;
@@ -76,8 +76,22 @@ body {
   text-decoration: none;
 }
 
-/* Devotion Information Card Containers */
-.devotion-card {
+/* Page Specific Typography */
+.main-title {
+  text-align: center;
+}
+
+.contact-card h2, 
+.contact-card h3 {
+  margin-top: 0;
+}
+
+.contact-card p {
+  font-family: var(--font-contact);
+}
+
+/* Contact Details Info Card Container */
+.contact-card {
   background-color: var(--bg-card);
   border-radius: var(--border-radius-card);
   padding: 20px 30px;
@@ -94,15 +108,6 @@ body {
 
 .text-container {
   flex: 1;
-}
-
-.devotion-card h2 {
-  margin-top: 0;
-}
-
-.devotion-card p {
-  text-align: left;
-  font-family: var(--font-body);
 }
 
 .image-container {
@@ -125,6 +130,7 @@ body {
   padding: 20px;
   margin-top: 40px;
 }
+
 @media (max-width: 600px) {
     label,
     input[type="text"],
