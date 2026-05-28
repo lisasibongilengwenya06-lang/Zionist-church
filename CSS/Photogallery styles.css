@@ -1,0 +1,134 @@
+:root {
+  /* Colors */
+  --bg-main: #238c62;
+  --bg-banner: #0f6e56ca;
+  --bg-nav-footer: #106554;
+  --color-accent: #1D9E75;
+  --color-text-light: #ffffff;
+  --color-text-muted: #9FE1CB;
+  --color-text-dark: #0F6E56;
+
+  /* Typography */
+  --font-heading: 'Cinzel', serif;
+  
+  /* Dimensions & Grid Layouts */
+  --grid-gap: 15px;
+  --card-height: 200px;
+  --border-radius: 8px;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-main);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Banner */
+.top-banner {
+  background-color: var(--bg-banner);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 70px;
+  height: 80px;
+}
+
+.banner-text {
+  text-align: center;
+}
+
+.banner-title {
+  color: var(--color-text-light);
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+.banner-subtitle {
+  color: var(--color-text-muted);
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  background-color: var(--bg-nav-footer);
+  padding: 10px 40px;
+  text-align: center;
+}
+
+.nav-link {
+  color: var(--color-text-light);
+  padding: 0 15px;
+  text-decoration: none;
+  border-right: 1px solid var(--color-accent);
+}
+
+.nav-link-last {
+  color: var(--color-text-light);
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+/* Gallery Headers & Elements */
+.gallery-title {
+  text-align: center;
+  font-family: var(--font-heading);
+  color: var(--color-text-dark);
+}
+
+.divider-line {
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-accent);
+  margin: 10px auto 30px;
+}
+
+/* Photo Grid Setup */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+  padding: 20px;
+}
+
+.photo-item {
+  text-align: center;
+}
+
+.photo-item img,
+.photo-item video {
+  width: 100%;
+  height: var(--card-height);
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-accent);
+}
+
+.photo-caption {
+  font-size: 14px;
+  color: var(--color-text-dark);
+  margin-top: 5px;
+}
+
+/* Footer */
+.main-footer {
+  background-color: var(--bg-nav-footer);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+@media (max-width: 600px) {
+    label,
+    input[type="text"],
+    input[type=submit] {
+    select,textarea {
+        flex: 100%;
+        min-width: 100%;
+    }
+}
