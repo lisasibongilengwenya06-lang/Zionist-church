@@ -1,0 +1,127 @@
+
+:root {
+  /* Colors */
+  --bg-main: #3cbe90;
+  --bg-banner: #0f6e56ca;
+  --bg-nav-footer: #106554;
+  --bg-card: #ffffff;
+  --color-accent: #1D9E75;
+  --color-text-light: #ffffff;
+  --color-text-muted: #9FE1CB;
+  
+  /* Typography */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Times New Roman', Times, serif;
+
+  /* Card Layout Properties */
+  --border-radius-card: 10px;
+  --border-radius-media: 8px;
+  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--bg-main);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Banner Components */
+.top-banner {
+  background-color: var(--bg-banner);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 70px;
+  height: 80px;
+}
+
+.banner-text {
+  text-align: center;
+}
+
+.banner-title {
+  color: var(--color-text-light);
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+.banner-subtitle {
+  color: var(--color-text-muted);
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Navigation Menu */
+.nav-bar {
+  background-color: var(--bg-nav-footer);
+  padding: 10px 40px;
+  text-align: center;
+}
+
+.nav-link {
+  color: var(--color-text-light);
+  padding: 0 15px;
+  text-decoration: none;
+  border-right: 1px solid var(--color-accent);
+}
+
+.nav-link-last {
+  color: var(--color-text-light);
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+/* Devotion Information Card Containers */
+.devotion-card {
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius-card);
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--color-accent);
+  box-shadow: var(--shadow-card);
+}
+
+.card-flex {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.text-container {
+  flex: 1;
+}
+
+.devotion-card h2 {
+  margin-top: 0;
+}
+
+.devotion-card p {
+  text-align: left;
+  font-family: var(--font-body);
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--border-radius-media);
+  border: 2px solid var(--color-accent);
+}
+
+/* Footer Element */
+.main-footer {
+  background-color: var(--bg-nav-footer);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
