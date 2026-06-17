@@ -132,3 +132,94 @@ body {
         min-width: 100%;
     }
 }
+/* Hover effect on gallery images — shows they are clickable */
+.photo-item img {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.photo-item img:hover {
+  transform: scale(1.03);
+  opacity: 0.88;
+  cursor: pointer;
+}
+
+/* The full-screen overlay that appears when an image is clicked */
+#lightbox-overlay {
+  display: none;                   /* hidden by default */
+  position: fixed;                 /* covers the entire viewport */
+  inset: 0;                        /* top:0 right:0 bottom:0 left:0 */
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+
+  /* Centre everything inside using flexbox */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* JavaScript adds this class to show the overlay */
+#lightbox-overlay.open {
+  display: flex;
+}
+
+/* The white box holding the large image and caption */
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80vw;
+  max-height: 85vh;
+}
+
+/* The enlarged image inside the lightbox */
+#lightbox-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;             /* show the full image, no cropping */
+  border: 3px solid #1D9E75;
+  border-radius: 6px;
+}
+
+/* Caption text below the enlarged image */
+#lightbox-caption {
+  color: #9FE1CB;
+  font-size: 15px;
+  margin-top: 12px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Shared styles for all three lightbox buttons (close, prev, next) */
+#lightbox-close,
+#lightbox-prev,
+#lightbox-next {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 2.5rem;
+  line-height: 1;
+  padding: 10px;
+  transition: color 0.15s;
+}
+
+#lightbox-close:hover,
+#lightbox-prev:hover,
+#lightbox-next:hover {
+  color: #1D9E75;
+}
+
+/* Position the close button in the top-right corner */
+#lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  font-size: 1.8rem;
+}
+
+/* Prev and next arrows are larger for easy clicking */
+#lightbox-prev,
+#lightbox-next {
+  font-size: 3.5rem;
+  padding: 0 15px;
+}
