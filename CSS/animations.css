@@ -1,0 +1,173 @@
+/*
+ * animations.css
+ * Shared animation and transition styles for all pages.
+ * Link this file in every HTML page's <head> section.
+ *
+ * Contains:
+ *   1. Navigation hover effects
+ *   2. Page entrance animations
+ *   3. Card hover animations
+ */
+
+/* ═══════════════════════════════════════════════════════════════
+   1. NAVIGATION HOVER EFFECTS
+   How it works:
+   - Each nav link gets a subtle underline that slides in from left.
+   - This is done using a ::after pseudo-element that starts at
+     width:0 and expands to width:100% on hover.
+   - The transition property makes it animate smoothly.
+═══════════════════════════════════════════════════════════════ */
+
+.nav-link,
+.nav-link-last {
+    position: relative;          /* needed so ::after can position itself */
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* The sliding underline — hidden by default */
+.nav-link::after,
+.nav-link-last::after {
+    content: '';                 /* empty element — purely decorative */
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;                    /* starts invisible */
+    height: 2px;
+    background-color: #9FE1CB;   /* light green — matches your accent colour */
+    transition: width 0.25s ease; /* animates width from 0 to 100% */
+}
+
+/* On hover — expand the underline to full width */
+.nav-link:hover::after,
+.nav-link-last:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link-last:hover {
+    color: #9FE1CB;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   2. PAGE ENTRANCE ANIMATIONS
+   How it works:
+   - Elements start invisible and slightly below their final position.
+   - The @keyframes rule defines the start (from) and end (to) states.
+   - The animation-fill-mode: both means the element stays hidden
+     before the animation starts and stays visible after it ends.
+   - animation-delay staggers elements so they appear one after another.
+═══════════════════════════════════════════════════════════════ */
+
+/* Define the keyframe animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px); /* starts 24px below final position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* ends at normal position */
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-16px); /* starts 16px above final position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header animates down from above */
+header {
+    animation: fadeInDown 0.5s ease both;
+}
+
+/* Page headings slide up */
+.page-heading,
+.main-title,
+.gallery-title {
+    animation: slideUp 0.5s ease 0.1s both;
+    /* 0.1s delay — starts just after header finishes */
+}
+
+/* Content boxes slide up with increasing delays */
+.content-box:nth-child(1) { animation: slideUp 0.5s ease 0.15s both; }
+.content-box:nth-child(2) { animation: slideUp 0.5s ease 0.25s both; }
+.content-box:nth-child(3) { animation: slideUp 0.5s ease 0.35s both; }
+.content-box:nth-child(4) { animation: slideUp 0.5s ease 0.45s both; }
+
+/* Devotion cards animate in */
+.devotion-card:nth-child(1) { animation: slideUp 0.5s ease 0.2s both; }
+.devotion-card:nth-child(2) { animation: slideUp 0.5s ease 0.35s both; }
+.devotion-card:nth-child(3) { animation: slideUp 0.5s ease 0.5s both; }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   3. CARD HOVER ANIMATIONS
+   How it works:
+   - Cards lift slightly using translateY (moves up 4px).
+   - A green box-shadow appears beneath to give a "raised" effect.
+   - transition on the card itself makes both changes smooth.
+   - The image inside scales up slightly for an additional effect.
+═══════════════════════════════════════════════════════════════ */
+
+/* Branch cards on Directory page */
+.branch-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.branch-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(29, 158, 117, 0.25);
+}
+
+/* Devotion cards */
+.devotion-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.devotion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(29, 158, 117, 0.25);
+}
+
+/* Photo grid items on About Us and Gallery */
+.photo-item {
+    transition: transform 0.2s ease;
+    overflow: hidden;
+}
+
+.photo-item:hover {
+    transform: translateY(-3px);
+}
+
+/* Image zoom inside photo items on hover */
+.photo-item img {
+    transition: transform 0.3s ease;
+}
+
+.photo-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Accordion items lift on hover */
+.accordion-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(29, 158, 117, 0.2);
+}
+
+/* Footer fade in last */
+footer,
+.main-footer {
+    animation: slideUp 0.5s ease 0.5s both;
+}

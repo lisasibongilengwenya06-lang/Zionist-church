@@ -7,6 +7,7 @@
   <title>Photo Gallery</title>
   <!-- External CSS -->
   <link rel="stylesheet" type="text/css" href="CSS/Photogallery styles.css">
+  <link rel="stylesheet" href="CSS/animations.css">
 </head>
 
 <body>
@@ -232,7 +233,12 @@
     <p>&copy; 2026 Zion Churches. All rights reserved.<br>ST10519253</p>
   </footer>
 
-  <!--JavaScript-->
+  <!--
+    JavaScript is linked at the BOTTOM of the body — this is best practice.
+    Reason: the browser reads HTML top to bottom. If the script ran before
+    the images existed in the DOM, querySelector('.photo-item img') would
+    find nothing. Placing it here ensures all elements are loaded first.
+  -->
   <script src="JavaScript/lightbox.js"></script>
 
 </body>
