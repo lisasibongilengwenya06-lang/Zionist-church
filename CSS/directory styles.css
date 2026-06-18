@@ -218,3 +218,97 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SEARCH AND FILTER STYLES
+   Added for Part 2 — section 2.2 (dynamic content with search/filter)
+═══════════════════════════════════════════════════════════════ */
+
+.search-section {
+  padding: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+/* Search bar wrapper */
+.search-bar-wrapper {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+}
+
+#search-input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 2px solid #1D9E75;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#search-input::placeholder { color: #9FE1CB; }
+
+#search-input:focus {
+  border-color: #9FE1CB;
+  box-shadow: 0 0 0 3px rgba(159, 225, 203, 0.2);
+}
+
+#search-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+/* Filter buttons */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  border: 1.5px solid #1D9E75;
+  border-radius: 20px;
+  background: none;
+  color: #9FE1CB;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(29, 158, 117, 0.15);
+}
+
+.filter-btn.active {
+  background: #1D9E75;
+  color: #fff;
+  border-color: #1D9E75;
+}
+
+/* Results counter */
+.results-count {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #9FE1CB;
+  min-height: 1.2rem;
+}
+
+/* No results message */
+#no-results {
+  text-align: center;
+  color: #9FE1CB;
+  font-size: 0.95rem;
+  padding: 2rem;
+  font-style: italic;
+}
