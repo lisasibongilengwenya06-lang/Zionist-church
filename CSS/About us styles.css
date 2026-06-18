@@ -222,3 +222,78 @@ footer{
         min-width: 100%;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   DENOMINATION TABS
+   Added for Part 2 — section 2.1 (interactive tabs)
+═══════════════════════════════════════════════════════════════ */
+
+.tabs-nav {
+  display: flex;
+  border-bottom: 2px solid #1D9E75;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.65rem 1.25rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #106554;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.tab-btn:hover {
+  background: rgba(29, 158, 117, 0.08);
+  color: #1D9E75;
+}
+
+.tab-btn.active {
+  color: #106554;
+  border-bottom-color: #106554;
+  background: rgba(29, 158, 117, 0.1);
+}
+
+.tab-panels {
+  padding: 1.5rem 0 0.5rem;
+}
+
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.25s ease;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel h3 {
+  font-size: 1.1rem;
+  color: #106554;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.tab-panel p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #2d2d2d;
+  margin-bottom: 0.75rem;
+}
+
+.tab-panel ul {
+  margin: 0.5rem 0 0 1.25rem;
+  font-size: 0.92rem;
+  line-height: 1.9;
+  color: #2d2d2d;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
