@@ -132,6 +132,12 @@ body {
         min-width: 100%;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHTBOX STYLES
+   Added for Part 2 — section 2.1 (image gallery with lightbox)
+═══════════════════════════════════════════════════════════════ */
+
 /* Hover effect on gallery images — shows they are clickable */
 .photo-item img {
   transition: transform 0.2s ease, opacity 0.2s ease;

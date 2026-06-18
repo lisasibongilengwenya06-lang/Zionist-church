@@ -1,20 +1,4 @@
-/*
- * lightbox.js
- * Handles the lightbox (enlarged image viewer) for Photo gallery.html
- *
- * How it works:
- *   1. On page load, find every gallery image and attach a click listener.
- *   2. When an image is clicked, populate the lightbox overlay with that
- *      image's src and caption, then show the overlay.
- *   3. The user can close by: clicking the ✕ button, clicking the dark
- *      backdrop, or pressing the Escape key.
- *   4. Left/right arrow buttons let the user navigate between images
- *      without closing the lightbox.
- */
 
-// ── 1. Collect all gallery images once the page has loaded ───────────────────
-// We wait for DOMContentLoaded so the images exist in the DOM before we
-// try to query them.
 
 document.addEventListener('DOMContentLoaded', function () {
 
