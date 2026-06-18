@@ -233,6 +233,10 @@
   </footer>
 
   <!--
+    JavaScript is linked at the BOTTOM of the body — this is best practice.
+    Reason: the browser reads HTML top to bottom. If the script ran before
+    the images existed in the DOM, querySelector('.photo-item img') would
+    find nothing. Placing it here ensures all elements are loaded first.
   -->
   <script src="JavaScript/lightbox.js"></script>
 
