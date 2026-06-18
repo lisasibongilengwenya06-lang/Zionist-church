@@ -138,7 +138,8 @@ body {
         flex: 100%;
         min-width: 100%;
     }
-
+  }
+}
 /* ═══════════════════════════════════════════════════════════════
    ACCORDION STYLES
    Added for Part 2 — section 2.1 (interactive accordion)
