@@ -138,3 +138,83 @@ body {
         min-width: 100%;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   INTERACTIVE MAP STYLES
+   Added for Part 2 — section 2.1 (interactive map with Leaflet)
+═══════════════════════════════════════════════════════════════ */
+
+.map-section {
+  margin: 2rem 1.5rem;
+}
+
+.section-heading {
+  font-size: 1.3rem;
+  color: var(--color-text-light, #fff);
+  margin-bottom: 0.5rem;
+}
+
+.map-intro {
+  font-size: 0.9rem;
+  color: var(--color-text-muted, #9FE1CB);
+  margin-bottom: 1rem;
+}
+
+/* The map container — MUST have explicit height or Leaflet renders nothing */
+#church-map {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+  border: 3px solid #1D9E75;
+  z-index: 1;
+}
+
+/* Map legend */
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: rgba(0,0,0,0.2);
+  border-radius: 6px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.green  { background: #2AAD27; }
+.legend-dot.blue   { background: #2A81CB; }
+.legend-dot.orange { background: #CB8427; }
+.legend-dot.red    { background: #CB2B3E; }
+
+/* Click hint on branch cards */
+.card-map-hint {
+  font-size: 0.82rem;
+  color: #9FE1CB;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* Make branch cards look clickable */
+.branch-card {
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}

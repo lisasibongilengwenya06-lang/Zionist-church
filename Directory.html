@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Where to go</title>
+  <title>Church Directory – Zionist Churches</title>
   <link rel="stylesheet" href="CSS/directory styles.css">
+
+  <!--
+    Leaflet CSS — must be loaded BEFORE the map div renders.
+    Leaflet is an open-source interactive maps library.
+    We load it from a CDN (Content Delivery Network) so no install is needed.
+  -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
+
 <body>
 
   <header>
     <div class="top-banner">
-      <img src="images/Logo.png" alt="Logo" class="logo">
+      <img src="images/Logo.png" alt="Zionist Church Logo" class="logo">
       <div class="banner-text">
         <h1 class="banner-title">Zionist Church</h1>
         <p class="banner-subtitle">Faith • Community • Service</p>
@@ -19,107 +29,157 @@
     </div>
 
     <nav class="nav-bar">
-      <a href="Home.html" class="nav-link">Home</a>
-      <a href="About us.html" class="nav-link">About us</a>
-      <a href="Directory.html" class="nav-link">Directory</a>
+      <a href="Home.html"          class="nav-link">Home</a>
+      <a href="About us.html"      class="nav-link">About Us</a>
+      <a href="Directory.html"     class="nav-link">Directory</a>
       <a href="Photo gallery.html" class="nav-link">Photo Gallery</a>
-      <a href="Devotions.html" class="nav-link">Devotions</a>
-      <a href="Contact us.html" class="nav-link-last">Contact us</a>
+      <a href="Devotions.html"     class="nav-link">Devotions</a>
+      <a href="Contact us.html"    class="nav-link-last">Contact Us</a>
     </nav>
   </header>
 
   <main>
-    <h1 class="main-title"><u>The different zionist church branches</u></h1>
-    <h1 class="main-title"><u>& the locations</u></h1>
 
-    <div class="branch-card">
+    <h1 class="main-title">Church Branches &amp; Locations</h1>
+
+    <!--
+      INTERACTIVE MAP SECTION
+      The #church-map div is where Leaflet renders the map.
+      It MUST have an explicit height set in CSS — Leaflet cannot
+      calculate height from 'auto' and will render a 0px tall map.
+    -->
+    <section class="map-section">
+      <h2 class="section-heading">Find a Church Near You</h2>
+      <p class="map-intro">
+        Click any marker on the map to learn more about that congregation.
+        You can also click a church card below to jump to its location on the map.
+      </p>
+      <div id="church-map"></div>
+
+      <!-- Map legend -->
+      <div class="map-legend">
+        <span class="legend-item"><span class="legend-dot green"></span> ZCC</span>
+        <span class="legend-item"><span class="legend-dot blue"></span> Shembe / AmaNazaretha</span>
+        <span class="legend-item"><span class="legend-dot orange"></span> AmaZion</span>
+        <span class="legend-item"><span class="legend-dot red"></span> Methodist</span>
+      </div>
+    </section>
+
+    <!-- BRANCH CARDS
+         Each card has data-church="N" where N matches the index
+         in the churches array in map.js. Clicking a card pans
+         the map to that location. -->
+
+    <!-- ZCC — index 0 -->
+    <div class="branch-card" data-church="0">
       <div class="card-flex">
         <div class="text-container">
-          <h2>Limpopo - Zion Christian Church (ZCC)</h2>
+          <h2>Limpopo – Zion Christian Church (ZCC)</h2>
           <p>
-            Its headquarters is in the Limpopo province in the city of Moria. There are branches of ZCC in all provinces 
-            of South Africa but most are found in Gauteng. They are located in:
+            Its headquarters is in the Limpopo province in the city of Moria.
+            There are branches of ZCC in all provinces of South Africa but most
+            are found in Gauteng. They are located in:
           </p>
           <ul>
             <li>Moria</li>
-            <li>Alexander</li>
+            <li>Alexandra</li>
             <li>Diepsloot</li>
-            <li>Cosmo city</li>
-            <li>George goch</li>
+            <li>Cosmo City</li>
+            <li>George Goch</li>
           </ul>
+          <p class="card-map-hint">&#128205; Click this card to see on map</p>
         </div>
         <div class="image-container">
-          <img src="images/Moria.jpg" alt="Images of Moria in Limpopo">
+          <img src="images/Moria.jpg" alt="Moria, Limpopo — ZCC Headquarters">
         </div>
       </div>
     </div>
 
-    <div class="branch-card">
+    <!-- Shembe — index 1 -->
+    <div class="branch-card" data-church="1">
       <div class="card-flex">
         <div class="text-container">
-          <h2>KwaZulu-Natal - AmaNazaretha(Shembe Church)</h2>
+          <h2>KwaZulu-Natal – AmaNazaretha (Shembe Church)</h2>
           <p>
-            It is the Nazareth baptist church that was founded in 1910/1911 by Isaiah Mloyiswa Mdliwamafa Shembe. 
-            It blends christianity with zulu traditions. The churches are in rural and suburban areas of KwaZulu-Natal.
+            The Nazareth Baptist Church was founded in 1910/1911 by Isaiah Mloyiswa
+            Mdliwamafa Shembe. It blends Christianity with Zulu traditions. The churches
+            are in rural and suburban areas of KwaZulu-Natal. They are located in:
+          </p>
+          <ul>
+            <li>eThekwini near Buffelsdraai and Verulam</li>
+            <li>eNanda</li>
+            <li>Doornfontein, Gauteng</li>
+          </ul>
+          <p class="card-map-hint">&#128205; Click this card to see on map</p>
+        </div>
+        <div class="image-container">
+          <img src="images/Shembe.jpg" alt="Shembe Church congregation">
+        </div>
+      </div>
+    </div>
+
+    <!-- Zion — index 2 -->
+    <div class="branch-card" data-church="2">
+      <div class="card-flex">
+        <div class="text-container">
+          <h2>Gauteng – AmaZion</h2>
+          <p>
+            There are different Zion churches throughout the province, such as
+            AmaZion weGalile, Gospel Church in Zion, and Jerusalem Church of Zion.
+            Some of these churches are of Zimbabwean descent but are based in South Africa.
             They are located in:
           </p>
           <ul>
-            <li>Ethekwini near Buffelsdraai and Verulam</li>
-            <li>eNanda</li>
-            <li>Doornfontein Gauteng, Johannesburg</li>
-          </ul>
-        </div>
-        <div class="image-container">
-          <img src="images/Shembe.jpg" alt="Images of the shembe church">
-        </div>
-      </div>
-    </div>
-
-    <div class="branch-card">
-      <div class="card-flex">
-        <div class="text-container">
-          <h2>Gauteng - AmaZion</h2>
-          <p>
-            There are different zion churches throughout the province, such as AmaZion weGalile, Gospel church in Zion and Jerusalem church of Zion. 
-            Some of these churches are of Zimbabwean decent but are based in South Africa. They are located in:
-          </p>
-          <ul>
             <li>Diepsloot</li>
-            <li>Alexander</li>
+            <li>Alexandra</li>
             <li>Honeydew</li>
           </ul>
+          <p class="card-map-hint">&#128205; Click this card to see on map</p>
         </div>
         <div class="image-container">
-          <img src="images/Zion.jpg" alt="Images of the Zion church">
+          <img src="images/Zion.jpg" alt="Zion Church congregation">
         </div>
       </div>
     </div>
 
-    <div class="branch-card">
+    <!-- Methodist — index 3, 4, 5 -->
+    <div class="branch-card" data-church="3">
       <div class="card-flex">
         <div class="text-container">
           <h2>Methodist</h2>
           <p>
-            There are different methodist churches throughout the country of South Africa 
-            and outside of South Africa such as Botswana and/or Zimbabwe. They are located in:
+            There are different Methodist churches throughout South Africa and
+            beyond, including Botswana and Zimbabwe. They are located in:
           </p>
           <ul>
             <li>Gauteng, Soweto</li>
-            <li>Eastern cape South Africa</li>
-            <li>Botswana Gaborone/ Francistown</li>
-            <li>Zimbabwe, Bulawayo</li>
+            <li>Port Elizabeth (Gqeberha), Eastern Cape</li>
+            <li>Francistown, Botswana</li>
+            <li>Bulawayo, Zimbabwe</li>
           </ul>
+          <p class="card-map-hint">&#128205; Click this card to see Eastern Cape marker</p>
         </div>
         <div class="image-container">
-          <img src="images/Methodist.jpg" alt="Women of Methodist">
+          <img src="images/Methodist.jpg" alt="Methodist Church women">
         </div>
       </div>
     </div>
+
   </main>
 
   <footer class="main-footer">
-    <p>&copy; 2026 Zion Churches. All rights reserved. <br> ST10519253</p>
+    <p>&copy; 2026 Zion Churches. All rights reserved.<br>ST10519253</p>
   </footer>
+
+  <!--
+    Leaflet JS loaded BEFORE map.js so Leaflet's L object exists
+    when map.js tries to use it. Script order matters.
+  -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/sp38=" crossorigin=""></script>
+
+  <!-- Our map logic — loaded AFTER Leaflet -->
+  <script src="JavaScript/map.js"></script>
 
 </body>
 </html>
