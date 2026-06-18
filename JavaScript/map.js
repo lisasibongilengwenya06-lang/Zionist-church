@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var map = L.map('church-map').setView([-28.0, 26.0], 5);
 
     // ── 2. Load map tiles from OpenStreetMap (free, no API key needed) ───────
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
         maxZoom: 18
     }).addTo(map);
 
