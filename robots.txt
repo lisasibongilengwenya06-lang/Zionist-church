@@ -1,10 +1,7 @@
-# robots.txt
-# This file tells search engine crawlers which pages they are allowed to index.
-# User-agent: * means the rules apply to ALL search engine bots (Google, Bing, etc.)
-# Disallow: / means block that path. An empty Disallow means allow everything.
-# Sitemap: tells crawlers where to find the sitemap.xml file.
+# robots.txt for Zionist Churches website
+# Tells search engine crawlers which pages to index.
 
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: http://127.0.0.1:5500/sitemap.xml
+Sitemap: https://extraordinary-kataifi-474e79.netlify.app/sitemap.xml
