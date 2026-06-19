@@ -1,9 +1,7 @@
 /*
- * accordion.js
  * Handles the accordion on Devotions.html
- *
- * How it works:
- *   1. Find all accordion buttons
+ * which:
+ *   1. Finds all accordion buttons
  *   2. When clicked, toggle the 'open' class on the body and arrow
  *   3. Update aria-expanded for accessibility
  */

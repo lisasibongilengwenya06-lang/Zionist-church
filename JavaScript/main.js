@@ -2,7 +2,7 @@
  * main.js
  * Shared JavaScript loaded on every page.
  *
- * Features:
+ * which has:
  *   1. Mobile navigation toggle — hamburger menu (☰) that shows/hides
  *      the nav links on small screens.
  *   2. Live date and time in the footer — updates every second.

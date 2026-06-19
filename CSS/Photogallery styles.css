@@ -134,10 +134,7 @@ body {
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   LIGHTBOX STYLES
-   Added for Part 2 — section 2.1 (image gallery with lightbox)
-═══════════════════════════════════════════════════════════════ */
+/* LIGHTBOX STYLES*/
 
 /* Hover effect on gallery images — shows they are clickable */
 .photo-item img {

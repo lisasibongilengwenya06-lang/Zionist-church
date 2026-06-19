@@ -220,10 +220,7 @@ body {
 }
 
 
-/* ═══════════════════════════════════════════════════════════════
-   SEARCH AND FILTER STYLES
-   Added for Part 2 — section 2.2 (dynamic content with search/filter)
-═══════════════════════════════════════════════════════════════ */
+/* SEARCH AND FILTER STYLES*/
 
 .search-section {
   padding: 1.5rem;

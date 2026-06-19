@@ -224,10 +224,7 @@ footer{
 }
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   DENOMINATION TABS
-   Added for Part 2 — section 2.1 (interactive tabs)
-═══════════════════════════════════════════════════════════════ */
+/*interactive tabs*/
 
 .tabs-nav {
   display: flex;

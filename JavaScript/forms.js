@@ -20,9 +20,7 @@
  *   - Message: required, minimum 10 characters, maximum 500
  */
 
-/* ══════════════════════════════════════════════════════════════
-   SHARED HELPER FUNCTIONS
-════════════════════════════════════════════════════════════ */
+/* SHARED HELPER FUNCTIONS */
 
 // showError — display an error message below a field
 function showError(fieldId, message) {
@@ -54,9 +52,7 @@ function isValidPhone(phone) {
 }
 
 
-/* ══════════════════════════════════════════════════════════════
-   ENQUIRY FORM
-════════════════════════════════════════════════════════════ */
+/*ENQUIRY FORM*/
 
 // Responses shown after a successful enquiry submission
 // Each key matches the value of the enquiry type dropdown
@@ -167,9 +163,7 @@ function resetEnquiryForm() {
 }
 
 
-/* ══════════════════════════════════════════════════════════════
-   CONTACT / MESSAGE FORM
-════════════════════════════════════════════════════════════ */
+/* CONTACT / MESSAGE FORM*/
 
 document.addEventListener('DOMContentLoaded', function () {
 

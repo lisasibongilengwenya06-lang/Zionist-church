@@ -45,9 +45,7 @@
 
   <main>
 
-    <!-- ═══════════════════════════════════════════
-         ZCC SECTION
-    ════════════════════════════════════════════ -->
+    <!-- ZCC SECTION-->
     <h1 class="gallery-title">Zion Christian Church</h1>
     <div class="divider-line"></div>
 
@@ -85,9 +83,7 @@
 
     </div>
 
-    <!-- ═══════════════════════════════════════════
-         SHEMBE SECTION
-    ════════════════════════════════════════════ -->
+    <!-- SHEMBE SECTION -->
     <h1 class="gallery-title">Shembe / AmaNazaretha</h1>
     <div class="divider-line"></div>
 
@@ -125,9 +121,7 @@
 
     </div>
 
-    <!-- ═══════════════════════════════════════════
-         ZION SECTION
-    ════════════════════════════════════════════ -->
+    <!--ZION SECTION -->
     <h1 class="gallery-title">Zion</h1>
     <div class="divider-line"></div>
 
@@ -158,7 +152,7 @@
         <p class="photo-caption">Church Choir</p>
       </div>
 
-      <!-- Video item — not included in lightbox (only images are clickable) -->
+      
       <div class="photo-item">
         <video controls>
           <source src="images/Download.mp4" type="video/mp4">
@@ -169,9 +163,7 @@
 
     </div>
 
-    <!-- ═══════════════════════════════════════════
-         METHODIST SECTION
-    ════════════════════════════════════════════ -->
+    <!--  METHODIST SECTION -->
     <h1 class="gallery-title">Methodist</h1>
     <div class="divider-line"></div>
 
@@ -211,12 +203,7 @@
 
   </main>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       LIGHTBOX OVERLAY
-       This sits outside <main> so it can cover the entire screen.
-       It is hidden by default (CSS: display:none).
-       JavaScript adds the class 'open' to show it.
-  ════════════════════════════════════════════════════════════ -->
+  <!-- LIGHTBOX OVERLAY -->
   <div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image viewer">
 
     <!-- Close button (top-right corner) -->
@@ -241,12 +228,7 @@
 <p><span id="datetime"></span></p>
   </footer>
 
-  <!--
-    JavaScript is linked at the BOTTOM of the body — this is best practice.
-    Reason: the browser reads HTML top to bottom. If the script ran before
-    the images existed in the DOM, querySelector('.photo-item img') would
-    find nothing. Placing it here ensures all elements are loaded first.
-  -->
+  
   <script src="JavaScript/lightbox.js"></script>
 
   <script src="JavaScript/main.js"></script>

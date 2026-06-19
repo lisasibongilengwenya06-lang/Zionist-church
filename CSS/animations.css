@@ -1,41 +1,31 @@
 /*
- * animations.css
  * Shared animation and transition styles for all pages.
- * Link this file in every HTML page's <head> section.
- *
- * Contains:
+ * which has:
  *   1. Navigation hover effects
  *   2. Page entrance animations
  *   3. Card hover animations
  */
 
-/* ═══════════════════════════════════════════════════════════════
-   1. NAVIGATION HOVER EFFECTS
-   How it works:
-   - Each nav link gets a subtle underline that slides in from left.
-   - This is done using a ::after pseudo-element that starts at
-     width:0 and expands to width:100% on hover.
-   - The transition property makes it animate smoothly.
-═══════════════════════════════════════════════════════════════ */
+/*NAVIGATION HOVER EFFECTS*/
 
 .nav-link,
 .nav-link-last {
-    position: relative;          /* needed so ::after can position itself */
+    position: relative;          
     text-decoration: none;
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-/* The sliding underline — hidden by default */
+/* The sliding underline*/
 .nav-link::after,
 .nav-link-last::after {
-    content: '';                 /* empty element — purely decorative */
+    content: '';                 
     position: absolute;
     bottom: -4px;
     left: 0;
-    width: 0;                    /* starts invisible */
+    width: 0;                    
     height: 2px;
-    background-color: #9FE1CB;   /* light green — matches your accent colour */
-    transition: width 0.25s ease; /* animates width from 0 to 100% */
+    background-color: #9FE1CB;   /* light green — matches colour */
+    transition: width 0.25s ease; 
 }
 
 /* On hover — expand the underline to full width */
@@ -50,17 +40,8 @@
 }
 
 
-/* ═══════════════════════════════════════════════════════════════
-   2. PAGE ENTRANCE ANIMATIONS
-   How it works:
-   - Elements start invisible and slightly below their final position.
-   - The @keyframes rule defines the start (from) and end (to) states.
-   - The animation-fill-mode: both means the element stays hidden
-     before the animation starts and stays visible after it ends.
-   - animation-delay staggers elements so they appear one after another.
-═══════════════════════════════════════════════════════════════ */
+/* 2. PAGE ENTRANCE ANIMATIONS*/
 
-/* Define the keyframe animation */
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -93,7 +74,6 @@ header {
 .main-title,
 .gallery-title {
     animation: slideUp 0.5s ease 0.1s both;
-    /* 0.1s delay — starts just after header finishes */
 }
 
 /* Content boxes slide up with increasing delays */
@@ -108,14 +88,7 @@ header {
 .devotion-card:nth-child(3) { animation: slideUp 0.5s ease 0.5s both; }
 
 
-/* ═══════════════════════════════════════════════════════════════
-   3. CARD HOVER ANIMATIONS
-   How it works:
-   - Cards lift slightly using translateY (moves up 4px).
-   - A green box-shadow appears beneath to give a "raised" effect.
-   - transition on the card itself makes both changes smooth.
-   - The image inside scales up slightly for an additional effect.
-═══════════════════════════════════════════════════════════════ */
+/* 3. CARD HOVER ANIMATIONS.*/
 
 /* Branch cards on Directory page */
 .branch-card {
@@ -173,10 +146,7 @@ footer,
 }
 
 
-/* ═══════════════════════════════════════════════════════════════
-   MOBILE NAVIGATION — HAMBURGER MENU
-   Added for Part 2 — mobile nav toggle
-═══════════════════════════════════════════════════════════════ */
+/*MOBILE NAVIGATION — HAMBURGER MENU*/
 
 /* Hamburger button — hidden on desktop, visible on mobile */
 #menuToggle {

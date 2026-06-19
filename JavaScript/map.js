@@ -2,7 +2,7 @@
  * map.js
  * Initialises the Leaflet interactive map on the Directory page.
  *
- * Leaflet is loaded via CDN in Directory.html — no install needed.
+ * Leaflet is loaded in Directory.html — no install needed.
  *
  * How it works:
  *   1. L.map() creates the map inside the #church-map div.
