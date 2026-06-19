@@ -1,0 +1,10 @@
+# robots.txt
+# This file tells search engine crawlers which pages they are allowed to index.
+# User-agent: * means the rules apply to ALL search engine bots (Google, Bing, etc.)
+# Disallow: / means block that path. An empty Disallow means allow everything.
+# Sitemap: tells crawlers where to find the sitemap.xml file.
+
+User-agent: *
+Disallow:
+
+Sitemap: http://127.0.0.1:5500/sitemap.xml

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap.xml
+  A sitemap helps search engines understand the structure of your website.
+  It lists every page with:
+    - loc       : the full URL of the page
+    - lastmod   : when the page was last updated
+    - changefreq: how often the page content changes
+    - priority  : importance of the page relative to others (0.0 to 1.0)
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home page — highest priority, most important page -->
+  <url>
+    <loc>http://127.0.0.1:5500/Home.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Us — high priority, core content -->
+  <url>
+    <loc>http://127.0.0.1:5500/About%20us.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Directory — high priority, interactive feature -->
+  <url>
+    <loc>http://127.0.0.1:5500/Directory.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Photo Gallery — medium priority -->
+  <url>
+    <loc>http://127.0.0.1:5500/Photo%20gallery.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Devotions — medium-high priority, updated weekly -->
+  <url>
+    <loc>http://127.0.0.1:5500/Devotions.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact Us — medium priority -->
+  <url>
+    <loc>http://127.0.0.1:5500/Contact%20us.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
