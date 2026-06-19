@@ -16,7 +16,8 @@ Group 3 BIT0701 - 1st year
  Part 1 of this project fucuses solely on the proposal of the Non-profit Oragnisation and creating webpages
 using the markup language HTML. There are 6 webpages with details relating to the NPO. Part 2 of this project
 focuses on adding CSS styles to the 6 HTML webpages and a detailed document on the improvements done and their 
-benefits.
+benefits.Part 2 focused on using css to improve the overall look of the webpages and lastly part 3 focused on 
+using javascript to improve functionality of the webpages.
 
 # The Goals of the project
 The goals of this project was to create awareness of different churches that are categorised as Zionist churches.
