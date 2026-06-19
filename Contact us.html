@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,13 @@
   <meta property="og:description" content="Get in touch with the Zionist Churches. Send us an enquiry or message and we will respond as soon as possible.">
   <meta property="og:type" content="website">
   <title>Contact Us – Zionist Churches of Southern Africa</title>
-  <!-- Link connection to your external style.css file -->
   <link rel="stylesheet" href="CSS/contactus styles.css">
   <link rel="stylesheet" href="CSS/animations.css">
 </head>
+
 <body>
 
   <header>
-    <!-- Top banner -->
     <div class="top-banner">
       <img src="images/Logo.png" alt="Zionist Church Logo" class="logo">
       <div class="banner-text">
@@ -27,56 +27,227 @@
       <div></div>
     </div>
 
-    <!-- Navigation bar below banner -->
     <nav class="nav-bar">
-      <a href="home.html" class="nav-link">Home</a>
-      <a href="About us.html" class="nav-link">About us</a>
-      <a href="Directory.html" class="nav-link">Directory</a>
+      <a href="Home.html"          class="nav-link">Home</a>
+      <a href="About us.html"      class="nav-link">About Us</a>
+      <a href="Directory.html"     class="nav-link">Directory</a>
       <a href="Photo gallery.html" class="nav-link">Photo Gallery</a>
-      <a href="Devotions.html" class="nav-link">Devotions</a>
-      <a href="Contact us.html" class="nav-link-last">Contact us</a>
+      <a href="Devotions.html"     class="nav-link">Devotions</a>
+      <a href="Contact us.html"    class="nav-link-last">Contact Us</a>
     </nav>
   </header>
 
   <main>
-    <h1 class="page-title"><u>How to contact us</u></h1>
-    
+
+    <h1 class="page-title">Contact Us</h1>
+
+    <!-- ── SECTION 1: Contact Details ───────────────────────── -->
     <div class="contact-card">
       <div class="card-flex">
-        
-        <!-- Text Details Column -->
+
         <div class="text-container">
           <h2><u>Physical Address</u></h2>
           <p>
-            <a href="https://www.google.com/maps/place/Braamfontein+Centre,+23+Jorissen+St,+Braamfontein,+Johannesburg,+2017/@-26.1926949,28.0339324,17z/data=!3m1!4b1!4m6!3m5!1s0x1e950c1bb2ad5483:0xffc2ed86c651c235!8m2!3d-26.1926949!4d28.0339324!16s%2Fg%2F11bw3y988c?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-              23 Jorissen Street​, Braamfontein
+            <a href="https://www.google.com/maps/place/Braamfontein+Centre,+23+Jorissen+St,+Braamfontein,+Johannesburg,+2017"
+               target="_blank">
+              23 Jorissen Street, Braamfontein
             </a>
           </p>
-          
-          <h2><u>Postal address</u></h2>
-          <p>P.O. Box 142, Wits, 2050​</p>
-          
-          <h2><u>Cell number</u></h2>
+
+          <h2><u>Postal Address</u></h2>
+          <p>P.O. Box 142, Wits, 2050</p>
+
+          <h2><u>Cell Number</u></h2>
           <p>+27 87 703 6461</p>
-          
-          <h3><u>Would you like to share your Zion church's images ? Send it through to:</u></h3>
+
+          <h3><u>Share your Zion church images:</u></h3>
           <p>zionchurches@icloud.com</p>
         </div>
-        
-        <!-- Map Media Image Column -->
-        <div style="flex: 1; text-align: center;">
-      <img src="images/location.png" 
-           alt="Location" 
-           style="width: 100%; max-width: 400px; border-radius: 8px; border: 2px solid #1D9E75;">
-    </div>
-        
+
+        <div style="flex:1; text-align:center;">
+          <img src="images/location.png"
+               alt="Map showing Zionist Church office at 23 Jorissen Street Braamfontein"
+               style="width:100%; max-width:400px; border-radius:8px; border:2px solid #1D9E75;">
+        </div>
+
       </div>
     </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         SECTION 2: ENQUIRY FORM
+         Purpose: user enquires about joining, volunteering,
+                  sponsoring, or visiting.
+         Validation: JavaScript checks all fields before submission.
+         Response: JS shows a relevant response based on enquiry type.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="form-section">
+      <h2 class="form-title">Make an Enquiry</h2>
+      <p class="form-subtitle">
+        Interested in joining, volunteering, sponsoring, or visiting?
+        Fill in the form below and we will get back to you.
+      </p>
+
+      <!-- Error summary — shown by JS if validation fails -->
+      <div id="enquiry-errors" class="error-summary" style="display:none;"></div>
+
+      <form id="enquiry-form" novalidate>
+
+        <div class="form-group">
+          <label for="enq-name">Full Name <span class="required">*</span></label>
+          <input type="text" id="enq-name" name="enq-name"
+                 placeholder="e.g. Thandi Dlamini" autocomplete="name">
+          <span class="field-error" id="enq-name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="enq-email">Email Address <span class="required">*</span></label>
+          <input type="email" id="enq-email" name="enq-email"
+                 placeholder="e.g. thandi@email.com" autocomplete="email">
+          <span class="field-error" id="enq-email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="enq-phone">Phone Number <span class="required">*</span></label>
+          <input type="tel" id="enq-phone" name="enq-phone"
+                 placeholder="e.g. 0821234567">
+          <span class="field-error" id="enq-phone-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="enq-type">Enquiry Type <span class="required">*</span></label>
+          <select id="enq-type" name="enq-type">
+            <option value="">-- Select an enquiry type --</option>
+            <option value="joining">Joining a Congregation</option>
+            <option value="volunteering">Volunteering at a Church Event</option>
+            <option value="sponsoring">Sponsoring a Church Programme</option>
+            <option value="visiting">Visiting Moria or Other Sites</option>
+          </select>
+          <span class="field-error" id="enq-type-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="enq-denomination">Preferred Denomination</label>
+          <select id="enq-denomination" name="enq-denomination">
+            <option value="">-- Select a denomination (optional) --</option>
+            <option value="ZCC">Zion Christian Church (ZCC)</option>
+            <option value="Shembe">Shembe / AmaNazaretha</option>
+            <option value="AmaZion">AmaZion</option>
+            <option value="Methodist">Methodist</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="enq-message">Additional Details</label>
+          <textarea id="enq-message" name="enq-message" rows="4"
+                    placeholder="Tell us more about your enquiry..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="enquiry-submit">
+          Submit Enquiry
+        </button>
+
+      </form>
+
+      <!--
+        Enquiry response panel — hidden by default.
+        JavaScript populates and shows this after successful submission.
+      -->
+      <div id="enquiry-response" class="response-panel" style="display:none;">
+        <h3 id="response-title"></h3>
+        <p id="response-body"></p>
+        <button class="btn-reset" onclick="resetEnquiryForm()">
+          Submit another enquiry
+        </button>
+      </div>
+
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         SECTION 3: CONTACT / MESSAGE FORM
+         Purpose: general message to the organisation.
+         Validation: JavaScript checks all fields.
+         Submission: compiles a mailto: link so the user's email
+                     client opens with the message pre-filled.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="form-section">
+      <h2 class="form-title">Send Us a Message</h2>
+      <p class="form-subtitle">
+        Have a general question or comment? Fill in the form below
+        and your message will be prepared for sending.
+      </p>
+
+      <div id="contact-errors" class="error-summary" style="display:none;"></div>
+
+      <form id="contact-form" novalidate>
+
+        <div class="form-group">
+          <label for="con-name">Full Name <span class="required">*</span></label>
+          <input type="text" id="con-name" name="con-name"
+                 placeholder="e.g. Sipho Nkosi" autocomplete="name">
+          <span class="field-error" id="con-name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="con-email">Email Address <span class="required">*</span></label>
+          <input type="email" id="con-email" name="con-email"
+                 placeholder="e.g. sipho@email.com" autocomplete="email">
+          <span class="field-error" id="con-email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="con-subject">Subject <span class="required">*</span></label>
+          <select id="con-subject" name="con-subject">
+            <option value="">-- Select a subject --</option>
+            <option value="General Enquiry">General Enquiry</option>
+            <option value="Prayer Request">Prayer Request</option>
+            <option value="Image Submission">Image Submission</option>
+            <option value="Website Feedback">Website Feedback</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="field-error" id="con-subject-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="con-message">Message <span class="required">*</span></label>
+          <textarea id="con-message" name="con-message" rows="5"
+                    placeholder="Type your message here..."></textarea>
+          <span class="field-error" id="con-message-error"></span>
+          <span class="char-count" id="con-char-count">0 / 500 characters</span>
+        </div>
+
+        <button type="submit" class="btn-submit" id="contact-submit">
+          Prepare Email
+        </button>
+
+      </form>
+
+      <!-- Success message shown after contact form is validated -->
+      <div id="contact-response" class="response-panel" style="display:none;">
+        <h3>&#10003; Message Ready</h3>
+        <p>
+          Your email client will open with your message pre-filled.
+          If it does not open automatically,
+          <a id="mailto-link" href="#">click here to send manually</a>.
+        </p>
+        <button class="btn-reset" onclick="resetContactForm()">
+          Write another message
+        </button>
+      </div>
+
+    </section>
+
   </main>
 
   <footer class="main-footer">
-    <p>&copy; 2026 Zion Churches. All rights reserved. <br> ST10519253</p>
+    <p>&copy; 2026 Zion Churches. All rights reserved.<br>ST10519253</p>
   </footer>
+
+  <script src="JavaScript/forms.js"></script>
 
 </body>
 </html>

@@ -146,3 +146,181 @@ body {
         flex: 100%;
         min-width: 100%;
     }
+
+/* ═══════════════════════════════════════════════════════════════
+   FORM STYLES
+   Added for Part 2 — section 4 (form functionality and validation)
+═══════════════════════════════════════════════════════════════ */
+
+.section-divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #1D9E75, transparent);
+  margin: 2rem 1.5rem;
+}
+
+.form-section {
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+}
+
+.form-title {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.form-subtitle {
+  font-size: 0.88rem;
+  color: #9FE1CB;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #9FE1CB;
+  margin-bottom: 0.35rem;
+}
+
+.required { color: #e74c3c; }
+
+/* Input, select, textarea shared styles */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid #1D9E75;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(159, 225, 203, 0.5);
+}
+
+.form-group select option {
+  background: #106554;
+  color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #9FE1CB;
+  box-shadow: 0 0 0 3px rgba(159, 225, 203, 0.15);
+}
+
+/* Error state */
+.input-error {
+  border-color: #e74c3c !important;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.15) !important;
+}
+
+.field-error {
+  font-size: 0.8rem;
+  color: #e74c3c;
+  margin-top: 0.3rem;
+  min-height: 1rem;
+}
+
+/* Character counter */
+.char-count {
+  font-size: 0.78rem;
+  color: #9FE1CB;
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+/* Submit button */
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1D9E75;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+  background: #106554;
+  transform: translateY(-1px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* Response panel */
+.response-panel {
+  background: rgba(29, 158, 117, 0.12);
+  border: 1.5px solid #1D9E75;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  animation: slideUp 0.3s ease both;
+}
+
+.response-panel h3 {
+  font-size: 1.05rem;
+  color: #9FE1CB;
+  margin-bottom: 0.75rem;
+}
+
+.response-panel p {
+  font-size: 0.9rem;
+  color: #e0f0ea;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.response-panel a {
+  color: #9FE1CB;
+  text-decoration: underline;
+}
+
+/* Reset button */
+.btn-reset {
+  background: none;
+  border: 1.5px solid #1D9E75;
+  color: #9FE1CB;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-reset:hover {
+  background: rgba(29, 158, 117, 0.15);
+}
+
+/* Error summary box */
+.error-summary {
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid #e74c3c;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: #e74c3c;
+}
